@@ -1,0 +1,30 @@
+version: "3.4"
+services:
+  db:
+    image: postgres:13
+    ports:
+      - 25432:5432
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=user
+      - POSTGRES_DB=users_db
+#
+#  dbinit:
+#    image: openjdk:8-jdk-alpine
+##        environment:
+##          - liquibase.driver=org.postgresql.Driver
+##          - liquibase.url=jdbc:postgresql://db:5432/users_db
+##          - liquibase.username=user
+##          - liquibase.password=user
+#    volumes:
+#      - $PWD:/opt
+#    working_dir: /opt
+#    command: ./mvnw liquibase:update -Dliquibase.url=jdbc:postgresql://172.21.0.2:5432/users_db -Dliquibase.username=user -Dliquibase.password=user
+#
+#    #      -Dliquibase-database-driver=org.postgresql.Driver\
+#    #      -Dliquibase-database-url=jdbc:postgresql://db:5432/users_db\
+#    #      -Dliquibase-database-username=user\
+#    #      -Dliquibase-database-password=user
+#    depends_on:
+#      - db
+#./mvnw liquibase:update -Dliquibase.url=jdbc:postgresql://localhost:25432/users_db -Dliquibase.username=user -Dliquibase.password=user

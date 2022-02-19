@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  db:
+    container_name: archive-service
+    image: postgres
+    restart: always
+    ports:
+      - "65432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=example
+      - POSTGRES_DB=records_db
