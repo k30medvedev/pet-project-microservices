@@ -1,6 +1,7 @@
 # pet-project-microservices
-pet-project-microservices
-Restfull tracking-system based on microservices   
+
+Restfull tracking menegment system based on microservices.
+
 -Java 17
 -Spring Boot
 -Spring Data
